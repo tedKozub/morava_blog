@@ -1,0 +1,73 @@
+baseURL = "http://localhost:1313"
+title = "Východomoravské cestoviny"
+theme = "puppet"
+themesDir = "themes/"
+copyright = ""
+paginate = 5
+languageCode = "cs"
+defaultContentLanguage = "cs"
+defaultContentLang = "cs"
+
+hasCJKLanguage = false
+enableInlineShortcodes = true
+enableEmoji = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+
+[outputs]
+home = ["HTML", "JSON", "RSS"]
+
+# prevent build failures when using Hugo's template _internal/opengraph.html 
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+[markup.highlight]
+noClasses = true
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = false
+style = "gruvbox"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "Příspěvky"
+url = "/"
+weight = 800
+[[menu.main]]
+identifier = "archive"
+name = "Archiv"
+url = "/archive/"
+weight = 10
+[[menu.main]]
+identifier = "about"
+name = "O mně"
+url = "/about/"
+weight = 50
+
+
+[params]
+author = "Ted"
+description = "Zajímavosti o Moravě, zejména té jihovýchodní"
+keywords = "blog,developer,personal"
+img_home = "img/home-bg.jpg"
+img_404 = "img/404-bg.jpg"
+
+useFaviconGenerator = true
+
+custom_js = []
+custom_css = [] # ["css/custom.css"]  Add your file to assets folder  [assets/css/custom.css]
+
+
+[params.social]
+github = "tedKozub"
+rss = true
