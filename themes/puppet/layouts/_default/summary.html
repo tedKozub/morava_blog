@@ -1,0 +1,29 @@
+<div class="post-preview">
+  <a href="{{ .RelPermalink }}">
+      <h2 class="post-title">{{ .Title }}</h2>
+      {{ with .Params.subtitle }}
+      <h3 class="post-subtitle">{{ . }}</h3>
+      {{ end }}
+      <div class="post-content-preview">
+        {{ if isset .Params "description" }} {{ index .Params "description" }}
+        {{ else }}
+        {{ .Summary | plainify | truncate 180 }}
+        {{ end }} 
+      </div>
+  </a>
+  <p class="post-meta">
+    {{ $weekday := .Date.Weekday }}
+    {{ $abbreviatedDay := "" }}
+
+    {{ if eq $weekday 0 }} {{ $abbreviatedDay = "Ne" }} {{ end }}
+    {{ if eq $weekday 1 }} {{ $abbreviatedDay = "Po" }} {{ end }}
+    {{ if eq $weekday 2 }} {{ $abbreviatedDay = "Út" }} {{ end }}
+    {{ if eq $weekday 3 }} {{ $abbreviatedDay = "St" }} {{ end }}
+    {{ if eq $weekday 4 }} {{ $abbreviatedDay = "Čt" }} {{ end }}
+    {{ if eq $weekday 5 }} {{ $abbreviatedDay = "Pá" }} {{ end }}
+    {{ if eq $weekday 6 }} {{ $abbreviatedDay = "So" }} {{ end }}
+
+    {{printf "%s%s" $abbreviatedDay (.Date.Format ", 2. 1. 2006")}}
+  </p>
+</div>
+<hr>

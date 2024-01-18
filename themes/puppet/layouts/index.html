@@ -1,0 +1,20 @@
+{{ define "container" }}
+{{ $paginator := .Paginate .Site.RegularPages }}
+{{ range $paginator.Pages }}
+   {{ .Render "summary" }}
+{{ end }}
+{{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
+<ul class="pager">
+  {{ if $paginator.HasPrev }}
+  <li class="previous">
+      <a href="{{ .Paginator.Prev.URL }}">&larr; Novější články</a>
+  </li>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+  <li class="next">
+      <a href="{{ .Paginator.Next.URL }}">Starší články &rarr;</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}
