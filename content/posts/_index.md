@@ -1,4 +1,6 @@
 +++
 title = "Posts"
-author = "Hugo Authors"
+author = "Ted"
 +++
+
+Default post ------ idk
