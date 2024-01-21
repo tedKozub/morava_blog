@@ -2,7 +2,7 @@
 title: "O mně"
 description: "Sem přijde nějaký popis"
 date: "2024-01-18"
-header_img: /img/about-bg.jpg
+header_img: img/about-bg.jpg
 aliases: ["about", "kontakt", "podekovani"]
 author: "Ted"
 ---
