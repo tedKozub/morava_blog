@@ -72,34 +72,6 @@
   <link rel="icon" href="{{ "logo.svg" | relURL }}" sizes="any" type="image/svg+xml" />
 {{ end }}
 
-<script>
-  // Add keyboard shortcuts to open and close search menu
-  document.addEventListener('keydown', function(event) {
-        // Check if the pressed key is the "Escape" key (keyCode 27)
-        if (event.key === 'Escape' || event.keyCode === 27) {
-          event.preventDefault(); 
-          $('.search-page').removeClass('search-active');
-        }
-        if ((event.ctrlKey || event.metaKey) && (event.key === 'K' || event.keyCode === 75)) {
-          event.preventDefault();
-          $('.search-page').toggleClass('search-active');
-          var prevClasses = $('body').attr('class') || '';
-          setTimeout(function () {
-            $('body').addClass('no-scroll');
-          }, 400)
-
-          if ($('.search-page').hasClass('search-active')) {
-            $('.search-icon-close').on('click', function (e) {
-                  e.preventDefault();
-                  $('.search-page').removeClass('search-active');
-                  $('body').attr('class', prevClasses);  // from closure 
-              });
-              $('#search-input').focus();
-          }
-        }
-      });
-</script>
-
 </head>
 
 <!-- hack iOS CSS :active style -->
