@@ -57,10 +57,12 @@ weight = 50
 
 [params]
 author = "Ted"
-description = "Zajímavosti o Moravě, zejména té jihovýchodní"
-keywords = "blog,developer,personal"
+short_link = "VC" # access params data as: {{ print .Site.Params.short_link }}
+description = "Zajímavosti z Moravy, zejména té jihovýchodní"
+keywords = "blog,travel,personal,morava,czech"
 img_home = "img/home-bg.jpg"
 img_404 = "img/404-bg.jpg"
+opengraph_img_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Hluk%2C_Hluboček%2C_výhled_na_Bílé_Karpaty.jpg/320px-Hluk%2C_Hluboček%2C_výhled_na_Bílé_Karpaty.jpg"
 
 useFaviconGenerator = true
 
