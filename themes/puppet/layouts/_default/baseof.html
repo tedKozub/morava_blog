@@ -19,6 +19,7 @@
   {{ end -}}
   <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
   <meta name="keywords" content="{{ (delimit .Keywords " ,") | default .Site.Params.keywords }}">
+  <meta property="og:title" content="{{print .Site.Title}}"/>
   <meta property="og:image" content="{{print .Site.Params.opengraph_img_url}}"/>
 
 
