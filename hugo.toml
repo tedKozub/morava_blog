@@ -50,7 +50,7 @@ url = "/archive/"
 weight = 10
 [[menu.main]]
 identifier = "about"
-name = "O mně"
+name = "O webu"
 url = "/about/"
 weight = 50
 
